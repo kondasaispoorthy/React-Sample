@@ -1,8 +1,7 @@
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -11,3 +10,41 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.f1{
+  width:40%;
+  border:1px solid black;
+  border-radius: 10px 10px 10px 10px;
+}
+.b1{
+  margin:0 auto;
+  display:block;
+}
+.navbar {
+  display: flex; /* Make the navbar a flex container */
+  justify-content: flex-start;
+  align-items: center; /* Align items vertically */
+  padding: 10px 20px; /* Add some padding */
+  background-color: lightblue; /* Optional background color */
+}
+
+.nav-list {
+  display: flex; /* Make the list a flex container */
+  list-style: none; /* Remove default list styling */
+  margin: 0px; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+}
+
+.nav-item {
+  margin-left: 20px;
+  font-weight:bold;
+}
+
+.nav-item:last-child {
+  margin-right: 0; /* Remove margin from last item */
+}
+
+.nav-item a {
+  text-decoration: none; /* Remove underline from links */
+  color: black; /* Link text color */
+}
+
