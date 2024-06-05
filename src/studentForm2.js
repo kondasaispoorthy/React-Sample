@@ -1,5 +1,5 @@
 // Importing Required Libraries
-import React, {useState,useEffect} from 'react';
+import React, {useState} from 'react';
 import { Link,useNavigate,useLocation} from 'react-router-dom';
 import ReactDOM from 'react-dom';
 import { Formik, Form, useField } from 'formik';
@@ -27,7 +27,7 @@ const StudentForm2 = () => {
     const UPDATE_URL = 'http://127.0.0.1:8000/student/update/';
     const navigate = useNavigate(); // Initialize useNavigate
     const [isUpdate, setIsUpdate] = useState(false);
-    // Using useLocation() to use information from other components in other Pages
+    // Using useLocation() to use information from other components
     const location = useLocation();
     const state = location.state || {};
     const name = state.name || '';
@@ -56,11 +56,6 @@ const StudentForm2 = () => {
           setSubmitting(false);
       }
   };
-  useEffect(() => {
-    if (state.id) {
-        setIsUpdate(true);
-    }
-}, [state.id]);
     return(
         <>
          <div className="container mt-5 f1" >
@@ -138,7 +133,7 @@ const StudentForm2 = () => {
                         <button
                             type="submit"
                             className="btn btn-success mx-2"
-                            disabled={isSubmitting || isUpdate}
+                            disabled={isSubmitting||state.id}
                         >
                             Add
                         </button>
@@ -161,8 +156,6 @@ const StudentForm2 = () => {
                         </div>
                     </Form>
                 )}
-  
-
      </Formik>
         </div>
         </>
