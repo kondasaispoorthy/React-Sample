@@ -21,6 +21,7 @@ const App = () => {
 );
 };
 // Previous Route(Not used Present)
+// Previous Route(Not used Present)
 /* <Route path="/" element={<StudentList/>} />
      <Route path="/addstudent" element={<StudentForm />} />
      <Route path="/addstudents" element = {<StudentForm1/>}/> */
